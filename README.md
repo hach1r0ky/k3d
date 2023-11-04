@@ -1,4 +1,4 @@
-# [![k3d](docs/static/k3d_logo_black_blue.svg)](https://k3d.io/)
+# [![k3d](Docs/static/k3d_logo_black_blue.svg)](https://k3d.io/)
 
 ## Install K3d on MacOS
 Install local k8s cluster with k3d, calico cni, metallb, nginx-ingress-controller

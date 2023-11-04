@@ -1,6 +1,3 @@
-nginx.yaml
-#K3d #config 
-
 ## nginx configuration
 ## Ref: https://github.com/kubernetes/ingress-nginx/blob/main/docs/user-guide/nginx-configuration/index.md
 ##
