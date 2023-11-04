@@ -1,7 +1,17 @@
+**Social:**
+
 # [![k3d](Docs/static/k3d_logo_black_blue.svg)](https://k3d.io/)
 
 ## Install K3d on MacOS
-Install local k8s cluster with k3d, calico cni, metallb, nginx-ingress-controller
+<div align="center">
+Install local k8s cluster with:
+</div>
+
+- k3d
+- calico cni
+- metallb
+- nginx-ingress-controller
+
 ## Requirement
 - [homebrew](https://brew.sh)
   - Install Homebrew:
