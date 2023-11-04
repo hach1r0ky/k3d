@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if [ "$1" == "" ] ; then
   echo "Usage: $0 K3D_CLUSTER_NAME"
   exit 1

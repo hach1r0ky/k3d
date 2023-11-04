@@ -42,16 +42,21 @@ kubectl get ns
 #### 5. Install Calico Component:
    - Note: Check the files: `./Manifest/calico/Installation.yaml` and `./cluster.yaml`
   
-*cidr* into `./Manifest/calico/Installation.yaml` and *--cluster-cidr=192.168.0.0/16* into ./cluster.yaml shueld be tha same
+*cidr* into `./Manifest/calico/Installation.yaml` and *--cluster-cidr=192.168.0.0/16* into ./cluster.yaml should be the same
 ```
-kubectl apply -f installation.yaml
+kubectl apply -f  $PWD/Manifest/calico/installation.yaml
 ```
+*And wait when all pods will status ready:*
+![](Docs/static/pod_status.png)
 #### 6. Install Metallb into cluster
 ```
 kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.10/config/manifests/metallb-native.yaml
 ```
 ```
-source $PWD/scripts/metallb.sh cluster-k3d-first
+cd $PWD/scripts
+chmod +x metallb.sh
+./metallb.sh cluster-k3d-first
+cd ..
 ```
 #### 7. Create PV storage
 ```
@@ -63,6 +68,7 @@ kubectl apply -f $PWD/Manifest/pv/pv.yaml
 kubectl create namespace nginx
 ```
 ```
+helm repo update nginx
 helm repo add nginx https://kubernetes.github.io/ingress-nginx -n nginx
 ```
 ```
